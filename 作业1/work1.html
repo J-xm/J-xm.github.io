@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="inp1"/>
+		<select>
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">x</option>
+			<option value="/">÷</option>
+		</select>
+		<input type="text" id="inp2"/>
+		<button id="but" onclick="Opration()">=</button>
+		<script>
+			function Opration(){
+			var sum1=document.getElementById("inp1").value;
+			var sum2=document.getElementById("inp2").value;
+			var a=document.getElementsByTagName("select")[0].value;
+			var result;
+				if(isNaN(sum1)||isNaN(sum2)){
+					alert("请输入数字");
+				}else{
+					if(a=="+"){
+					result=parseFloat(sum1)+parseFloat(sum2);
+					}else if(a=="-"){
+					result=parseFloat(sum1)-parseFloat(sum2);	
+					}else if(a=="*"){
+					result=parseFloat(sum1)*parseFloat(sum2);	
+					}else if(a=="/"){
+					result=parseFloat(sum1)/parseFloat(sum2);	
+					}
+				}
+					alert(result);
+			}
+		</script>
+	</body>
+</html>

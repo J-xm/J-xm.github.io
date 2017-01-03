@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/北美票房榜.css"/>
+	</head>
+	<body>
+		
+		<div class="container">
+			<h1 id="title">-</h1>
+			<ul class="title-bar">
+				<li class="title-box">从第<span id="start">-</span>条  到  第<span id="count">-</span>条 共<span id="total">-</span>条</li>
+			</ul>
+			<section>
+				<ul id="list-box">
+					<li>
+						<img src="..." alt="..." />
+						<h5 class="movie-name"></h5>
+						<p class="actors">主演: <span></span></p>
+						<p>分类: <span></span></p>
+					</li>
+				</ul>
+			</section>
+		</div>
+		
+		
+		<script>
+			var start = $$('#start'),
+				count = $$('#count'),
+				total = $$('#total'),
+				title = $$('#title'),
+				listBox = $$('#list-box');
+			var str = '';
+			
+			function json_callback(data){
+				
+				start.innerHTML = data.start;
+				count.innerHTML = data.count;
+				total.innerHTML = data.total;
+				title.innerHTML = data.title;
+				
+				
+				for(var i=0,subjectsLen=data.subjects.length;i<subjectsLen;i++){
+					var castsStr = '';var genresStr = '';
+					for(var j=0,castsLen=data.subjects[i].casts.length;j<castsLen;j++){
+						castsStr += '<span>'+data.subjects[i].casts[j].name+'</span>'
+					}
+					for(var k=0,genresLen=data.subjects[i].genres.length;k<genresLen;k++){
+						genresStr += ' <span> '+data.subjects[i].genres[k]+' </span> '
+					}
+					str += "<li><img src="+data.subjects[i].images.medium+" alt="+data.subjects[i].alt+" /><h5 class='movie-name'>"+data.subjects[i].title+"</h5><p class='actors'>主演: "+castsStr+"</p><p>分类: "+genresStr+"</li>"
+					
+				}
+				listBox.innerHTML = str;
+			}
+			function $$(selector){
+				return document.querySelector(selector);
+			}
+
+		</script>
+		<script src="https://api.douban.com/v2/movie/coming_soon?callback=json_callback"></script>
+	</body>
+</html>

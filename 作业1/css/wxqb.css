@@ -1,0 +1,84 @@
+*{
+	box-sizing: border-box;
+}
+html{
+	background-color: #F0F0F0;
+}
+body{
+	padding: 44px 0 0 0;
+}
+
+
+/*header start*/
+.header{
+	width: 100%;
+	/*height: 44px;*/
+	position: fixed; left: 0;top: 0;
+	background: #323232;
+	/*line-height: 44px;*/
+	padding: 0.5em 1em;
+	z-index: 9999;
+	/*line-height: 44px;*/
+}
+.header i,.header dt,.header dd{
+	color: #FAFAFA;
+}
+
+.header dt{
+	font-size: 1.2em;
+}
+.header dd{
+	font-size: 0.5em;
+}
+.header li:first-child{
+	height: 32px;
+	line-height: 32px;
+	margin-right: 2em;
+}
+.header li:last-child{
+	height: 32px;
+	line-height: 32px;
+}
+/*header end*/
+
+/*section start*/
+
+/*第一部分*/
+section{
+	width: 100%;
+}
+.first{
+	height: 3.3333rem;
+	text-align: center;
+	background: #888;
+	padding: 1.111rem 0;
+}
+.first i,.first p{
+	color: #FAFAFA;
+}
+.first i{
+	display: block;
+	/*margin-top: 30px;*/
+	margin-bottom: 10px;
+}
+/*第二部分*/
+.second{
+	width: 100%;
+}
+.second li{
+	width: 33.33333%;
+	/*height: 125px;*/
+	height: 3.33333rem;
+	text-align: center;
+	border: 1px solid #F0F0F0;
+	padding: 1.1rem 0;
+	background: #FAFAFA;
+}
+.second li i{
+	display: block;
+	margin-bottom: 10px;
+}
+/*third start*/
+
+
+/*section end*/

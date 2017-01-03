@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			<style>
+			#banner{
+				width:900px;
+				height:450px;
+				margin:0 auto;
+				position:relative;
+			}
+			#banner img{
+				width:450px;
+				height:450px;
+				vertical-align:middle;
+			}
+			ul li{
+				list-style:none;
+				width:25px;
+				height:25px;
+				background-color:rgba(240,240,240,0.5);
+				float:left;
+				margin:0 10px;
+				text-align:center;
+				line-height:25px;
+				border-radius:5px;
+				cursor:pointer;
+			}
+			ul{
+				margin:0;
+				padding:0;
+				position:absolute;
+				left:150px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="banner">
+			<img src="img/banner1.jpg" />
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</div>
+		<script>
+			var li=document.getElementsByTagName("li");
+			var img=document.getElementsByTagName("img")[0];
+			var num=0;
+			window.setInterval(function(){
+				var length=li.length;      
+				if(num<length-1){
+					num++;
+				}else{
+					num=0;
+				}
+				img.src="img/banner"+(num+1)+".jpg";
+			},2000);
+			
+			
+			for(var i=0;i<li.length;i++){
+				li[i].index=i;
+				li[i].onmouseover=function(){
+					img.src="img/banner"+(this.index+1)+".jpg";
+				}
+			}
+			</script>
+	</body>
+</html>

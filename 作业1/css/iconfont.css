@@ -1,0 +1,63 @@
+
+@font-face {font-family: "iconfont";
+  src: url('../font/iconfont.eot?t=1482753172458'); /* IE9*/
+  src: url('../font/iconfont.eot?t=1482753172458#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../font/iconfont.woff?t=1482753172458') format('woff'), /* chrome, firefox */
+  url('../font/iconfont.ttf?t=1482753172458') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../font/iconfont.svg?t=1482753172458#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-licai:before { content: "\f0038"; } /*理财*/
+
+.icon-chongzhi:before { content: "\f029c"; } /*充值*/
+
+.icon-dianying:before { content: "\e633"; }  /*电影*/
+
+.icon-iconhuizongguifan07:before { content: "\e647"; } 
+
+.icon-zhuanzhang01:before { content: "\e639"; } /*转账*/
+
+.icon-hongbao:before { content: "\e607"; } /*红包*/
+
+.icon-iconfontzuojiantou:before { content: "\e6a8"; } /*左箭头*/
+
+.icon-homeuizqcaipiao:before { content: "\e621"; } /*彩票*/
+
+.icon-xin:before { content: "\e68a"; }  
+
+.icon-huochepiao:before { content: "\e628"; } /*火车*/
+
+.icon-shoukuan:before { content: "\e623"; }  /*收款*/
+
+.icon-lingqian:before { content: "\e61d"; }  /*零钱*/
+
+.icon-shenghuojiaofei:before { content: "\e680"; } /*生活缴费*/
+
+.icon-xinyongqiahuankuan:before { content: "\e685"; } /*信用卡*/
+
+.icon-dianping1193379easyiconnet:before { content: "\e65c"; } /*吃喝玩乐*/
+
+.icon-meituanwaimai:before { content: "\e9ab"; } /*美团外卖*/
+
+.icon-chengshi:before { content: "\e67a"; } /*城市*/
+
+.icon-go2meilishuo:before { content: "\e62c"; } /*美丽说*/
+
+.icon-qiekong:before { content: "\e629"; } 
+
+.icon-jiudian:before { content: "\e65d"; }  /*酒店*/
+
+.icon-goose:before { content: "\e699"; }
+
+.icon-didichuhang:before { content: "\e736"; } /*滴滴*/
+
+.icon-zifuwuicon-:before { content: "\e75a"; } 
+
